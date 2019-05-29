@@ -35,7 +35,9 @@ class Login(BaseResource):
                     }
         
 		response = {
-                        'access_token' : create_access_token(identity=identity)
+                        'access_token' : create_access_token(identity=identity),
+                        'name' : name,
+                        'id' : id
                     }
 
 

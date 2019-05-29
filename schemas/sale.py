@@ -21,7 +21,7 @@ class Sale(BaseSchemas):
 	sale_status = fields.Nested('SaleStatus', data_key='sale_status_id', dump_only=True)
 	creation_date = fields.DateTime(format='%d/%m/%Y %I:%M:%S %p', dump_only=True)
 	
-	__filtering__ = ['id', 'user_id', 'client_id', 'sale_status_id']
+	__filtering__ = ['id', 'user_id', 'client_id', 'sale_status_id', 'creation_date']
 
 class SaleStatus(BaseSchemas):
 	__model__ = ModelSaleStatus

@@ -13,7 +13,7 @@ class SoldProducts(BaseResource):
 		if request.method == 'GET':
 			args = dict(request.args.copy())
 			args['sale_id'] = id
-			args['fields'] = 'product_id'
+			args['fields'] = 'product_id,quantity,unity_price,total_price'
 			response, code = SchemaSoldProducts.get(args)
 
 		elif request.method == 'POST':
